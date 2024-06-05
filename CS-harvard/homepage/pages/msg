@@ -1,0 +1,30 @@
+_.style = "background: #aa669933; padding: 40px ";
+_.widget={type:"topbar_a", title:"About Me"};
+_.widget={type:"lmenu"};
+
+
+let d2=ext.randid(10);
+
+_.view = {
+  type: "container",
+  id: d2,
+  style: "background : #ffffff22; margin-top:20px; padding: 20px",
+};
+_.view = { type: "tv", parent: "#" + d2, txt: "Send me a Message", class: "h2" };
+
+let loginf=[
+{name: 'name', txt: 'Your Name',  type: 'Text', length: 30},
+{name: 'location', txt: 'Address',type: 'Text', length: 30} ,
+{name: 'message', txt: 'Message',type: 'Text', length: 300} ]
+
+
+_.widget = {
+  type: "form1",
+  xdt: loginf,
+  parent: "#" + d2,
+  style: "padding:20px",
+  txtbtn: "SUBMIT",
+  fid: "loginform",
+};
+
+_.view = { type: "tv", txt: "This form wont work because no backend script support.<br> Instead Email me at <b class='redf'>prajsnet@gmail.com</b>", parent: "#" + d2 };

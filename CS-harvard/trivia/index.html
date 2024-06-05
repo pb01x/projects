@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <div id="questions"></div>
+                <!-- TODO: Add multiple choice question here -->
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <div id="questions_free"></div>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+
+        <script>
+            let qs=[];
+            qs[0]=[];
+            qs[0][0]="From where you can enroll and study CS50?";
+            qs[0][1]=["Facebook.com", "Google.com","Edx.org", "tiktok.com"];
+            //right answer
+            qs[0][2]=2;
+
+            qs[1]=[];
+            qs[1][0]="What is the captial city of Nepal?";
+            qs[1][1]=["New York", "Kathmandu","Paris", "Tokyo"];
+            //right answer
+            qs[1][2]=1;
+
+            for (const key in qs) {
+                let htmlx= `<h3 class="question" >${qs[key][0]}</h3>`;
+                let freeinput=`<div id="statusf${key}"></div><div class="freeans"><input data-id='${key}'><button>Check Answer</button></div>`;
+                document.getElementById("questions_free").innerHTML+=htmlx+freeinput;
+                htmlx+=`<div id="status${key}"></div><div data-id="${key}" class="answers">`;
+                for (const opt in qs[key][1]) {
+                    htmlx+=`<button >${qs[key][1][opt]}</button>`;
+                }
+                document.getElementById("questions").innerHTML+=htmlx;
+            }
+
+            let anssss=document.querySelectorAll(".answers button");
+            for (const key in anssss) {
+                    if (typeof (anssss[key]) != "object") continue;
+                    anssss[key].addEventListener('click', function(e) {
+                        let btnsel=e.target;
+                        let parent=btnsel.parentElement;
+                        let qid=parent.getAttribute("data-id");
+                        if(parent.querySelectorAll("button")[qs[qid][2]]==btnsel){
+                            btnsel.className="correct";
+                            document.getElementById("status"+qid).innerHTML="CORRECT";
+                        }
+                        else{
+                            btnsel.className="incorrect";
+                            document.getElementById("status"+qid).innerHTML="INCORRECT";
+                        }
+                    })
+                }
+
+                let ans_free = document.querySelectorAll(".freeans button");
+                    for (const k in ans_free) {
+                        if (typeof (ans_free[k]) != "object") continue;
+                        ans_free[k].addEventListener("click", function(e) {
+                            let parent = e.target.parentElement;
+                            let input = parent.querySelectorAll("input")[0];
+                            let qid = input.getAttribute("data-id");
+
+                            if (input.value.toLowerCase() == qs[qid][1][qs[qid][2]].toLowerCase()) {
+                                input.className = "correct";
+                                document.getElementById("statusf"+qid).innerHTML="CORRECT";
+                            } else {
+                                input.className = "incorrect";
+                                document.getElementById("statusf"+qid).innerHTML="INCORRECT";
+                            }
+                        })
+                    }
+
+
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,5 @@
+_.style = "background: #33229933; padding: 40px ";
+_.widget={type:"topbar_a", title:"FAQ"};
+_.widget={type:"lmenu"};
+
+

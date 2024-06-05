@@ -1,0 +1,8 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+By getting the average of danceability, eneergy, valeence, loudness.
+
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+Aura might not be very representativee of listner by the above way of averaging only may be i think if we make the database table to collect the user playing duration, time of day(morning, day, evening, night) of any song. then we can relate with the above average with the new table to correctly calculat the aura.
+

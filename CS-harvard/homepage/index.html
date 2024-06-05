@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.2/feather.min.js" integrity="sha512-zMm7+ZQ8AZr1r3W8Z8lDATkH05QG5Gm2xc6MlsCdBz9l6oE8Y7IXByMgSm/rdRQrhuHt99HAYfMljBOEZ68q5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="/widgets.js?v=1"></script>
+        <script src="/pb.js?v=1"></script>
+
+        <title>pb</title>
+    </head>
+
+    <body>
+        <menu-t> </menu-t>
+
+
+        <div id="xcontent" class="lh fill" style="position: relative; overflow-y: scroll;">
+            <menu-l> </menu-l>
+            <x-bdy></x-bdy>
+            <x-pop>
+                <div class="nav">
+                    <button class="close accent" onclick="ext.popclose()"><i data-feather="x"></i></button>
+                </div>
+                <div class="content">
+                </div>
+            </x-pop>
+
+            <x-r1panel></x-r1panel>
+        </div>
+        <x-fav>
+            <div class="lh">
+                <button class="whitebg" onclick="ext.thememode(1)">Light</button>
+                <button class="blackbg" onclick="ext.thememode(0)">Dark</button>
+            </div>
+        </x-fav>
+        <test>
+            <!-- <div class="fthick">
+                <i data-feather="airplay"></i>
+            </div>
+            <script>
+                feather.replace({ class: 'fthick', 'stroke-width': 1 });
+              </script> -->
+        </test>
+        <menu-b> </menu-b>
+    </body>
+
+
+
+
+</html>

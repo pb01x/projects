@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<div style="width:100%;">
+    <table style="width:100%;">
+        <tr style="background: #3388aa33;">
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th style="text-align:right">Price</th>
+            <th style="text-align:right">Total</th>
+        </tr>
+
+        {% for d in data.tran %}
+        <tr>
+            <td>{{d}}</td>
+            <td>{{data.tran[d].qty}}</td>
+            <td style="text-align:right">${{data.tran[d].price}}</td>
+            <td style="text-align:right">${{data.tran[d].total}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td></td>
+            <td></td>
+            <td style="text-align:right"><b>Cash</b></td>
+            <td style="text-align:right">${{data.cash}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td style="text-align:right"><b>Total</b></td>
+            <td style="text-align:right">${{data.gtotal}}</td>
+        </tr>
+    </table>
+
+</div>
+{% endblock %}

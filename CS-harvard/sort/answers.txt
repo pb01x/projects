@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: Because the sorted txt is taking less time than the reversed and random, Result: random: 6.059s, reversed: 5.170s, sorted: 0.707s
+
+sort2 uses: Merge sort
+
+How do you know?: Because takes less time than other 2 and time taken is almost consistent with all txt, Result:  random: 0.848s, reversed: 0.785s, sorted: 0.672s
+
+sort3 uses: Selection sort
+
+How do you know?: Because it is slower than Merge sort (sort2) as well as for sorted txt it is slower than sort 1, Random:  random: 2.597s, reversed: 2.657s, sorted: 2.723

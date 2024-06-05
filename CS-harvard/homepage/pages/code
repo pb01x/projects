@@ -1,0 +1,6 @@
+_.style = "background: #22884433; padding: 40px ";
+_.widget={type:"topbar_a", title:"Code Usage"};
+_.widget={type:"lmenu"};
+
+
+_.widget={type:"cardm", title:"Codes Used",  txt:"I have made this simple homepage project from the framework that i am making for my final project.<br>Because the homepage doesnt have the backend programming support i have altered to use it for this case."}

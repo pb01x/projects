@@ -1,0 +1,4 @@
+_.style = "padding: 0px; background:white; ";
+
+_.view={type:"container", id:"cntrs", class:"pb"};
+

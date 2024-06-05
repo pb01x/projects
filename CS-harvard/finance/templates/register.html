@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+ <div>
+    <span class="mb-3" style="color:red;">{{ msg }}</span>
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input name="username" class="ml-4" type="text" placeholder="Username">
+        </div>
+        <div class="mb-3">
+            <input name="password" class="ml-4" type="text" placeholder="Password">
+        </div>
+        <div class="mb-3">
+            <input name="confirmation" class="ml-4" type="text" placeholder="Retype Password">
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+
+    </form>
+ </div>
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+_.style = "background: #66339933; padding: 40px ";
+_.widget={type:"topbar_a", title:"About Me"};
+_.widget={type:"lmenu"};
+
+
+_.widget={type:"cardm", title: "Who am I ?", txt:"I am Prajwal Basnet."}
+_.widget={type:"cardm", title: "Where am i from?", txt:"I am from Nepal Kathmandu."}
+_.widget={type:"cardm", title: "How do i look?", txt:"<div id='hy8d9eyh'></div>"}
+_.view={type:"btn", class:"xbtn", txt: "Click to view my picture.", parent:"#hy8d9eyh", attr:{exec:"pop./pages/pic"}}
+
+
+let menus = [
+  { icon: "folder-plus", txt: "Add Account Group", shortcut: "A", exec: "pop./hoa/accgrp" },
+  { icon: "plus", txt: "Test.",  exec: "run.refresh()" },
+  { icon: "copy", txt: "test 2. ",  exec: "run.refresh()" }
+];
+_.widget = { type: "cmenu", menus: menus };
+
+$($("menu-l a")[0]).addClass("active");
